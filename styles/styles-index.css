@@ -3,7 +3,7 @@
     --color-light: #5a7086;      /* Gris Azulado Claro */
     --color-complementary: #b44d12; /* Terracota */
     --color-analog: #3a5f7d;     /* Azul Cielo */
-    --color-neutral: #d1d3d4;    /* Gris Claro */
+    --color-neutral: #f5f5f5;    /* Gris Claro */
     --color-blanco: #FFFFFF;
 }
 
@@ -21,7 +21,7 @@ header {
     border-radius: 8px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     color: var(--color-blanco);
-    background-color: var(--color-base);
+    background-color: var(--color-analog);
 }
 
 .boxicon-custom-size {
@@ -30,6 +30,6 @@ header {
 }
 
 .btn-custom {
-    background-color: var(--color-analog);
+    background-color: var(--color-base);
     color: var(--color-blanco);
 }
