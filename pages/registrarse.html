@@ -5,62 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario</title>
     <link rel="stylesheet" href="/styles/styles-registrarse.css">
+    <link rel="stylesheet" href="">
 </head>
 <body>
-    <form id="formularioRegistro">
-        <div class="campo">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div class="campo">
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-        </div>
-        <div class="campo">
-            <label for="fechaNacimiento">Fecha de nacimiento:</label>
-            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
-        </div>
-        <div class="campo">
-            <label for="sexo">Sexo:</label>
-            <select id="sexo" name="sexo" required>
-                <option value="">Seleccione</option>
-                <option value="femenino">Femenino</option>
-                <option value="masculino">Masculino</option>
-                <option value="otro">Otro</option>
-            </select>
-        </div>
-        <div class="campo">
-            <label for="estadoCivil">Estado civil:</label>
-            <select id="estadoCivil" name="estadoCivil" required>
-                <option value="">Seleccione</option>
-                <option value="soltero">Soltero/a</option>
-                <option value="casado">Casado/a</option>
-                <option value="divorciado">Divorciado/a</option>
-                <option value="viudo">Viudo/a</option>
-            </select>
-        </div>
-        <div class="campo">
-            <label for="curp">CURP:</label>
-            <input type="text" id="curp" name="curp" required>
-        </div>
-        <div class="campo">
-            <label for="fotoINE">Adjunta foto de INE (2 caras):</label>
-            <input type="file" id="fotoINE" name="fotoINE" accept="image/*" multiple required>
-        </div>
-        <div class="campo">
-            <label for="comprobanteDomicilio">Comprobante de domicilio:</label>
-            <input type="file" id="comprobanteDomicilio" name="comprobanteDomicilio" accept="image/*,application/pdf" required>
-        </div>
-        <div class="campo">
-            <label for="antecedentesPenales">Antecedentes penales:</label>
-            <input type="file" id="antecedentesPenales" name="antecedentesPenales" accept="image/*,application/pdf" required>
-        </div>
-        <div class="botones">
-            <button type="button" id="btnRegresar">Regresar</button>
-            <button type="submit">Registrar</button>
+    <header class="p-3 text-center">
+        <h1 class="fs-1">CONNECTICALL</h1>
+    </header>
+    <main>
+        <!-- Slider para elegir entre Cliente y Empresa -->
+        <div class="tipoRegistro">
+            <label for="tipoRegistroSlider">Cliente - Empresa:</label>
+            <input type="range" id="tipoRegistroSlider" name="tipoRegistro" min="0" max="1" value="0">
+            <p id="tipoRegistroMensaje">Te registrarás como cliente</p>
         </div>
 
-    </form>
+        <form id="formularioRegistro">
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="campo">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="campo">
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+            <div class="campo">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="">Seleccione</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="estadoCivil">Estado civil:</label>
+                <select id="estadoCivil" name="estadoCivil" required>
+                    <option value="">Seleccione</option>
+                    <option value="soltero">Soltero/a</option>
+                    <option value="casado">Casado/a</option>
+                    <option value="divorciado">Divorciado/a</option>
+                    <option value="viudo">Viudo/a</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="curp">CURP:</label>
+                <input type="text" id="curp" name="curp" required>
+            </div>
+            <div class="campo">
+                <label for="fotoINE">Adjunta foto de INE (2 caras):</label>
+                <input type="file" id="fotoINE" name="fotoINE" accept="image/*" multiple required>
+            </div>
+            <div class="campo">
+                <label for="comprobanteDomicilio">Comprobante de domicilio:</label>
+                <input type="file" id="comprobanteDomicilio" name="comprobanteDomicilio" accept="image/*,application/pdf" required>
+            </div>
+            <div class="campo">
+                <label for="antecedentesPenales">Antecedentes penales:</label>
+                <input type="file" id="antecedentesPenales" name="antecedentesPenales" accept="image/*,application/pdf" required>
+            </div>
+            <div class="botones">
+                <button type="button" id="btnRegresar">Regresar</button>
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+    </main>
+   
+    
     <script src="/JavaScript/registrarse.js"></script>
 </body>
 </html>
