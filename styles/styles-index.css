@@ -1,0 +1,35 @@
+:root {
+    --color-base: #232f3e;       /* Azul Oscuro */
+    --color-light: #5a7086;      /* Gris Azulado Claro */
+    --color-complementary: #b44d12; /* Terracota */
+    --color-analog: #3a5f7d;     /* Azul Cielo */
+    --color-neutral: #d1d3d4;    /* Gris Claro */
+    --color-blanco: #FFFFFF;
+}
+
+body {
+    background-color: var(--color-neutral);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    background-color: var(--color-analog);
+    color: var(--color-blanco);
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    color: var(--color-blanco);
+    background-color: var(--color-base);
+}
+
+.boxicon-custom-size {
+    width: 100px;
+    height: auto;
+}
+
+.btn-custom {
+    background-color: var(--color-analog);
+    color: var(--color-blanco);
+}
