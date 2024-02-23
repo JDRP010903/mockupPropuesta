@@ -1,26 +1,37 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+:root {
+    --color1: #edf6f9; /* Fondo principal y color de fuente para algunos elementos */
+    --color2: #83c5be; /* Color secundario, para fondos de algunos elementos */
+    --color3: #006d77; /* Color de acento, para botones y elementos destacados */
+    --colorTexto: #333; /* Color de texto principal */
 }
 
-.formularioRegistro {
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--color1);
+    color: var(--colorTexto);
+}
+
+#formularioRegistro {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color2);
 }
 
 .campo {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .campo label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color3);
 }
 
 .campo input[type="text"],
@@ -30,14 +41,50 @@ body {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color2);
     box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.campo input[type="text"]:focus,
+.campo input[type="date"]:focus,
+.campo input[type="file"]:focus,
+.campo select:focus {
+    outline: none;
+    border-color: var(--color3);
 }
 
 button {
-    background-color: #007bff;
-    color: white;
+    background-color: var(--color3);
+    color: var(--color1);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darken(var(--color3), 10%);
+}
+
+/* Estilos adicionales para mejorar la accesibilidad y la experiencia de usuario */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 109, 119, 0.5);
+}
+
+.campo input[type="file"] {
+    background-color: var(--color1);
+    border: 1px dashed var(--color3);
+}
+
+/* Mejora visual para los select */
+.campo select {
+    appearance: none;
+    background-color: var(--color1);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%23006d77" d="M5.5,7.5l4.5,4.5l4.5,-4.5l-9,0Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; /* Ajusta según sea necesario */
 }
