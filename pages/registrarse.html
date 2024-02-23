@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="/styles/styles-registrarse.css">
+</head>
+<body>
+    <form id="formularioRegistro">
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="campo">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+        </div>
+        <div class="campo">
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        </div>
+        <div class="campo">
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="">Seleccione</option>
+                <option value="femenino">Femenino</option>
+                <option value="masculino">Masculino</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+        <div class="campo">
+            <label for="estadoCivil">Estado civil:</label>
+            <select id="estadoCivil" name="estadoCivil" required>
+                <option value="">Seleccione</option>
+                <option value="soltero">Soltero/a</option>
+                <option value="casado">Casado/a</option>
+                <option value="divorciado">Divorciado/a</option>
+                <option value="viudo">Viudo/a</option>
+            </select>
+        </div>
+        <div class="campo">
+            <label for="curp">CURP:</label>
+            <input type="text" id="curp" name="curp" required>
+        </div>
+        <div class="campo">
+            <label for="fotoINE">Adjunta foto de INE (2 caras):</label>
+            <input type="file" id="fotoINE" name="fotoINE" accept="image/*" multiple required>
+        </div>
+        <div class="campo">
+            <label for="comprobanteDomicilio">Comprobante de domicilio:</label>
+            <input type="file" id="comprobanteDomicilio" name="comprobanteDomicilio" accept="image/*,application/pdf" required>
+        </div>
+        <div class="campo">
+            <label for="antecedentesPenales">Antecedentes penales:</label>
+            <input type="file" id="antecedentesPenales" name="antecedentesPenales" accept="image/*,application/pdf" required>
+        </div>
+        <button type="submit">Registrar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
