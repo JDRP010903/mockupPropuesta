@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Center UI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e5e5e5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .window {
+            position: relative;
+            width: 400px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .header {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        .answer-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .answer-button:hover {
+            background-color: #0056b3;
+        }
+
+        .info-window {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .info-box {
+            padding: 15px;
+            background: #f2f2f2;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .info-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .info-text {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="callWindow" class="window hidden">
+        <div class="header">Llamada entrante</div>
+        <div class="content">¿Deseas atender la llamada?</div>
+        <button class="button answer-button" onclick="answerCall()">Contestar</button>
+    </div>
+    <div id="infoWindow" class="window hidden">
+        <div class="header">Información de la Llamada</div>
+        <div class="info-window">
+            <div class="info-box">
+                <div class="info-icon">😊</div>
+                <div class="info-text">Emociones</div>
+            </div>
+            <div class="info-box">
+                <div class="info-icon">⏰</div>
+                <div class="info-text">Tiempo</div>
+            </div>
+            <div class="info-box">
+                <div class="info-icon">📄</div>
+                <div class="info-text">Requerimiento del cliente</div>
+            </div>
+            <div class="info-box">
+                <div class="info-icon">👤</div>
+                <div class="info-text">Asesor call center</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById('callWindow').classList.remove('hidden');
+        }, 3000); // Espera 3 segundos para mostrar la ventana de llamada
+
+        function answerCall() {
+            document.getElementById('callWindow').classList.add('hidden');
+            document.getElementById('infoWindow').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
