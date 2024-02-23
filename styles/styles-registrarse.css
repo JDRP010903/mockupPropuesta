@@ -79,6 +79,23 @@ button:focus {
     border: 1px dashed var(--color3);
 }
 
+
+.botones {
+    display: flex;
+    justify-content: space-between; /* Alinea uno al lado izquierdo y el otro al derecho */
+    padding: 10px 0; /* Añade un poco de espacio arriba y abajo */
+}
+
+button#btnRegresar {
+    background-color: var(--color2); /* Utiliza el color secundario para este botón */
+    color: var(--color3); /* Texto con el color de acento */
+}
+
+button#btnRegresar:hover {
+    background-color: lighten(var(--color2), 10%); /* Hace el botón ligeramente más claro al pasar el mouse */
+}
+
+
 /* Mejora visual para los select */
 .campo select {
     appearance: none;
