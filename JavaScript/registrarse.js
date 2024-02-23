@@ -1,8 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
     const formularioRegistro = document.getElementById('formularioRegistro');
 
+
+    document.getElementById('btnRegresar').addEventListener('click', function() {
+        window.history.back(); // Esto llevará al usuario a la página anterior en el historial
+        // O puedes usar window.location.href = 'url_a_donde_quieras_redirigir';
+    });
+    
+
     formularioRegistro.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        
 
         // Aquí puedes implementar validaciones adicionales si lo deseas
         const nombre = document.getElementById('nombre').value;
@@ -21,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
+        
         // Ejemplo de cómo podrías manejar los archivos. Necesitarás ajustar esto según cómo manejes los archivos en tu servidor.
         const formData = new FormData();
         formData.append('nombre', nombre);
