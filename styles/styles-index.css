@@ -2,6 +2,7 @@
     --color1: #edf6f9;
     --color2: #83c5be;
     --color3: #006d77;
+    --colorHover: #00444a;
 }
 
 body {
@@ -19,6 +20,10 @@ header {
     color: var(--color1);
 }
 
+main {
+    padding: 100px;
+}
+
 .card {
     border-radius: 8px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
@@ -27,11 +32,15 @@ header {
 }
 
 .boxicon-custom-size {
-    width: 80px;
+    width: 100px;
     height: auto;
 }
 
 .btn-custom {
     background-color: var(--color3);
     color: var(--color1);
+}
+
+.btn-custom:hover {
+    background-color: var(--colorHover);
 }
