@@ -12,39 +12,39 @@
     <header class="p-3 text-center">
         <h1 class="fs-1">CONNECTICALL</h1>
     </header>
-    <main>
+    <main class="container mt-5">
         <!-- Slider para elegir entre Cliente y Empresa -->
-        <div class="tipoRegistro">
-            <label for="tipoRegistroSlider">Cliente - Empresa:</label>
-            <input type="range" id="tipoRegistroSlider" name="tipoRegistro" min="0" max="1" value="0">
-            <p id="tipoRegistroMensaje">Te registrarás como cliente</p>
+        <div class="tipoRegistro mb-4" data-before="Cliente" data-after="Empresa">
+            <input type="range" class="form-range" id="tipoRegistroSlider" name="tipoRegistro" min="0" max="1" value="0">
+            <p id="tipoRegistroMensaje" class="text-center">Te registrarás como cliente</p>
         </div>
 
         <form id="formularioRegistro">
-            <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <!-- Campos del formulario -->
+            <div class="campo mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
             </div>
-            <div class="campo">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
+            <div class="campo mb-3">
+                <label for="apellido" class="form-label">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
             </div>
-            <div class="campo">
-                <label for="fechaNacimiento">Fecha de nacimiento:</label>
-                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            <div class="campo mb-3">
+                <label for="fechaNacimiento" class="form-label">Fecha de nacimiento:</label>
+                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
             </div>
-            <div class="campo">
-                <label for="sexo">Sexo:</label>
-                <select id="sexo" name="sexo" required>
+            <div class="campo mb-3">
+                <label for="sexo" class="form-label">Sexo:</label>
+                <select class="form-select" id="sexo" name="sexo" required>
                     <option value="">Seleccione</option>
                     <option value="femenino">Femenino</option>
                     <option value="masculino">Masculino</option>
                     <option value="otro">Otro</option>
                 </select>
             </div>
-            <div class="campo">
-                <label for="estadoCivil">Estado civil:</label>
-                <select id="estadoCivil" name="estadoCivil" required>
+            <div class="campo mb-3">
+                <label for="estadoCivil" class="form-label">Estado civil:</label>
+                <select class="form-select" id="estadoCivil" name="estadoCivil" required>
                     <option value="">Seleccione</option>
                     <option value="soltero">Soltero/a</option>
                     <option value="casado">Casado/a</option>
@@ -52,29 +52,28 @@
                     <option value="viudo">Viudo/a</option>
                 </select>
             </div>
-            <div class="campo">
-                <label for="curp">CURP:</label>
-                <input type="text" id="curp" name="curp" required>
+            <div class="campo mb-3">
+                <label for="curp" class="form-label">CURP:</label>
+                <input type="text" class="form-control" id="curp" name="curp" required>
             </div>
-            <div class="campo">
-                <label for="fotoINE">Adjunta foto de INE (2 caras):</label>
-                <input type="file" id="fotoINE" name="fotoINE" accept="image/*" multiple required>
+            <div class="campo mb-3">
+                <label for="fotoINE" class="form-label">Adjunta foto de INE (2 caras):</label>
+                <input type="file" class="form-control" id="fotoINE" name="fotoINE" accept="image/*" multiple required>
             </div>
-            <div class="campo">
-                <label for="comprobanteDomicilio">Comprobante de domicilio:</label>
-                <input type="file" id="comprobanteDomicilio" name="comprobanteDomicilio" accept="image/*,application/pdf" required>
+            <div class="campo mb-3">
+                <label for="comprobanteDomicilio" class="form-label">Comprobante de domicilio:</label>
+                <input type="file" class="form-control" id="comprobanteDomicilio" name="comprobanteDomicilio" accept="image/*,application/pdf" required>
             </div>
-            <div class="campo">
-                <label for="antecedentesPenales">Antecedentes penales:</label>
-                <input type="file" id="antecedentesPenales" name="antecedentesPenales" accept="image/*,application/pdf" required>
+            <div class="campo mb-3">
+                <label for="antecedentesPenales" class="form-label">Antecedentes penales:</label>
+                <input type="file" class="form-control" id="antecedentesPenales" name="antecedentesPenales" accept="image/*,application/pdf" required>
             </div>
-            <div class="botones">
-                <button type="button" id="btnRegresar">Regresar</button>
-                <button type="submit">Registrar</button>
+            <div class="d-flex justify-content-between">
+                <button type="button" id="btnRegresar" class="btn btn-secondary">Regresar</button>
+                <button type="submit" class="btn btn-primary">Registrar</button>
             </div>
         </form>
     </main>
-   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="/JavaScript/registrarse.js"></script>
 </body>

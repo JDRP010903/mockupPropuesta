@@ -1,8 +1,11 @@
+/* Estilos generales */
 :root {
     --color1: #edf6f9; /* Fondo principal y color de fuente para algunos elementos */
     --color2: #83c5be; /* Color secundario, para fondos de algunos elementos */
     --color3: #006d77; /* Color de acento, para botones y elementos destacados */
     --colorTexto: #333; /* Color de texto principal */
+    --slider-thumb-color: var(--color3); /* Color del thumb del slider */
+    --slider-track-color: var(--color2); /* Color de la pista del slider */
 }
 
 body {
@@ -11,6 +14,57 @@ body {
     background-color: var(--color1);
     color: var(--colorTexto);
 }
+
+/* Estilos específicos del slider */
+.tipoRegistro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tipoRegistro label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#tipoRegistroSlider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: var(--slider-track-color);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#tipoRegistroSlider:hover {
+    opacity: 1;
+}
+
+#tipoRegistroSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--slider-thumb-color);
+    cursor: pointer;
+}
+
+#tipoRegistroSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--slider-thumb-color);
+    cursor: pointer;
+}
+
+#tipoRegistroMensaje {
+    margin-top: 10px;
+}
+
 
 #formularioRegistro {
     max-width: 800px;

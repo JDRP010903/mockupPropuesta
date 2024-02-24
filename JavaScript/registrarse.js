@@ -1,18 +1,48 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const tipoRegistroSlider = document.getElementById('tipoRegistroSlider');
+    const tipoRegistroMensaje = document.getElementById('tipoRegistroMensaje');
     const formularioRegistro = document.getElementById('formularioRegistro');
+    const camposFormulario = document.querySelectorAll('.campo input, .campo select, .campo label');
+    const botonesFormulario = document.querySelectorAll('button');
 
+    // Cambia los colores del formulario según la selección del slider
+    function actualizarColoresFormulario(esEmpresa) {
+        const colorFondo = esEmpresa ? '#ffdddd' : '#edf6f9'; // Rojo para empresa, azul para cliente
+        const colorBorde = esEmpresa ? '#ff4d4d' : '#83c5be';
+        const colorTexto = esEmpresa ? '#ff4d4d' : '#006d77';
+        
+        document.body.style.backgroundColor = colorFondo;
+        camposFormulario.forEach(campo => {
+            campo.style.borderColor = colorBorde;
+            campo.style.color = colorTexto;
+            // Para etiquetas y texto dentro de inputs/select
+            if (campo.tagName.toLowerCase() === 'label') {
+                campo.style.color = colorTexto;
+            }
+        });
+        botonesFormulario.forEach(boton => {
+            boton.style.backgroundColor = colorTexto;
+            boton.style.color = '#fff';
+        });
+        tipoRegistroMensaje.style.color = colorTexto; // Cambia el color del mensaje
+    }
+
+    tipoRegistroSlider.addEventListener('input', function () {
+        if (this.value === '1') {
+            tipoRegistroMensaje.innerText = 'Te registrarás como empresa';
+            actualizarColoresFormulario(true);
+        } else {
+            tipoRegistroMensaje.innerText = 'Te registrarás como cliente';
+            actualizarColoresFormulario(false);
+        }
+    });
 
     document.getElementById('btnRegresar').addEventListener('click', function() {
-        window.history.back(); // Esto llevará al usuario a la página anterior en el historial
-        // O puedes usar window.location.href = 'url_a_donde_quieras_redirigir';
+        window.history.back();
     });
-    
 
     formularioRegistro.addEventListener('submit', function (e) {
         e.preventDefault();
-
-        
-
         // Aquí puedes implementar validaciones adicionales si lo deseas
         const nombre = document.getElementById('nombre').value;
         const apellido = document.getElementById('apellido').value;
