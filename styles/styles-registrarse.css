@@ -15,51 +15,6 @@ body {
     color: var(--colorTexto);
 }
 
-/* Estilos específicos del slider */
-.tipoRegistro {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.tipoRegistro label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-}
-
-#tipoRegistroSlider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 8px;
-    border-radius: 5px;
-    background: var(--slider-track-color);
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-#tipoRegistroSlider:hover {
-    opacity: 1;
-}
-
-#tipoRegistroSlider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: var(--slider-thumb-color);
-    cursor: pointer;
-}
-
-#tipoRegistroSlider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: var(--slider-thumb-color);
-    cursor: pointer;
-}
 
 #tipoRegistroMensaje {
     margin-top: 10px;
