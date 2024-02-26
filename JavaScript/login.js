@@ -13,9 +13,9 @@ function buscarYRedirigir() {
     // Redirigir según el tipo de usuario
     if (usuarioEncontrado) {
         if (usuarioEncontrado.tipoUsuario === 'usuario') {
-            window.location.href = '../pages/agenteInicio.html';
+            window.location.href = './agenteInicio.html';
         } else if (usuarioEncontrado.tipoUsuario === 'adminUsuario') {
-            window.location.href = '../pages/empresaInicio.html';
+            window.location.href = './empresaInicio.html';
         }
     } else {
         alert('Usuario no encontrado o correo electrónico incorrecto.');
