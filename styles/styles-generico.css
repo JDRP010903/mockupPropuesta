@@ -26,6 +26,22 @@ main {
     background-color: var(--color2);
 }
 
+.call-card {
+    border-left: 5px solid var(--color2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { background-color: var(--color1); }
+    50% { background-color: var(--color2); }
+    100% { background-color: var(--color1); }
+}
+
+.bi-telephone-fill {
+    font-size: 2rem;
+    color: var(--color3);
+}
+
 .boxicon-custom-size {
     width: 100px;
     height: auto;
