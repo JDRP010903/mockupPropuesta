@@ -59,6 +59,19 @@
     height: auto;
 }
 
+.card {
+    border: 1px solid var(--color2);
+}
+
+.card-title {
+    color: var(--color3);
+}
+
+.card-text {
+    color: var(--color3);
+}
+
+
 @media (min-width: 400px) {
     .navbar-toggler {
         padding: 8px;
