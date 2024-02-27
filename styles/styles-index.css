@@ -1,0 +1,70 @@
+:root {
+    --color1: #edf6f9;
+    --color2: #83c5be;
+    --color3: #006d77;
+    --colorHover: #00444a;
+}
+
+body {
+    background-image: url("../assets/images/backgroundImage.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.custom-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.custom-nav li:hover {
+    background-color: var(--colorHover);
+}
+
+.contenedorInicio {
+    height: 400px;
+    background: url("../assets/images/inicioImage.webp") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.contenedorTextoinicio {
+    color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoCentrado {
+    background-color: rgba(0, 109, 119, 0.7); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centrar el texto horizontalmente */
+}
+
+.contenedorTextoEmpresas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
