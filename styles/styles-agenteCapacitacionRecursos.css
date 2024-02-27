@@ -1,0 +1,68 @@
+:root {
+    --color1: #edf6f9;
+    --color2: #83c5be;
+    --color3: #006d77;
+    --colorHover: #00444a;
+}
+
+.sidebar {
+    background-color: var(--color1);
+}
+
+.sidebar .nav-link {
+    color: var(--color3);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link:focus {
+    background-color: var(--colorHover);
+    color: var(--color1);
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* Personalización del botón de hamburguesa */
+.navbar-toggler {
+    border: none; /* Elimina el borde predeterminado */
+    outline: none; /* Elimina el contorno al hacer clic */
+}
+
+/* Estilos para el ícono de hamburguesa */
+.navbar-toggler .bi-list {
+    font-size: 1.5rem; /* Ajusta el tamaño del ícono */
+    color: var(--color1); /* Usa una de tus variables de color para el ícono */
+}
+
+/* Ajustes adicionales para el botón si es necesario */
+.navbar-toggler {
+    padding: 6px;
+    left: 10px; /* Alinea el botón a la derecha dentro del navbar */
+    margin-right: 1rem; /* Agrega un margen derecho si es necesario */
+}
+
+@media (min-width: 400px) {
+    .navbar-toggler {
+        padding: 8px;
+        left: 10px; /* Alinea el botón a la derecha dentro del navbar */
+        margin-right: 1rem; /* Agrega un margen derecho si es necesario */
+    }
+}
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
