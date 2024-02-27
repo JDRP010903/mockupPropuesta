@@ -54,6 +54,27 @@
     margin-right: 1rem; /* Agrega un margen derecho si es necesario */
 }
 
+
+/* Estilos para el contenedor de las llamadas */
+#callsContainer {
+    max-height: 75vh; /* Ajusta este valor según la altura deseada */
+    overflow-y: auto; /* Permite el desplazamiento vertical dentro del contenedor */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Asegura que el contenedor principal se ajuste correctamente */
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para main que contiene las llamadas para permitir el desplazamiento */
+main {
+    overflow: hidden; /* Evita desbordamientos inesperados */
+    flex-grow: 1; /* Permite que el main ocupe el espacio disponible */
+}
+
+
 @media (min-width: 400px) {
     .navbar-toggler {
         padding: 8px;
