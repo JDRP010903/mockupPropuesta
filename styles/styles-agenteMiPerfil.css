@@ -54,6 +54,11 @@
     margin-right: 1rem; /* Agrega un margen derecho si es necesario */
 }
 
+.contenedorInfo {
+    height: 450px;
+    overflow-y: auto;
+}
+
 @media (min-width: 400px) {
     .navbar-toggler {
         padding: 8px;
