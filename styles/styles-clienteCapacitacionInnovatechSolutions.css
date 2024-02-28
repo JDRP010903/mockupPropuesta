@@ -65,13 +65,25 @@
 }
 
 .card {
+    width: auto; /* Ancho fijo para cada tarjeta */
+    height: 250px; /* Altura fija para cada tarjeta */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    height: 250px;
+    justify-content: space-between; /* Distribuye el espacio interior de manera uniforme */
 }
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.btn-custom {
+    width: auto; /* Permite que el botón ajuste su ancho al contenido */
+    padding: 5px 15px; /* Ajusta el padding para un mejor aspecto visual */
+}
+
 
 
 @media (min-width: 400px) {
