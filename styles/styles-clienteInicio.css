@@ -55,8 +55,16 @@
 }
 
 .contenedorImagenesEmpresas img {
-    max-width: 80px;
-    height: auto;
+    max-height: 50px;
+    width: auto;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 @media (min-width: 400px) {

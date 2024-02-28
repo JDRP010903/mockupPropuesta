@@ -54,27 +54,23 @@
     margin-right: 1rem; /* Agrega un margen derecho si es necesario */
 }
 
-.empresa-card {
-    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+.overflow-auto {
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-.empresa-card:hover {
-    transform: scale(1.05); /* Escala la tarjeta al 105% de su tamaño original */
+.overflow-auto .col-md-6 {
+    display: inline-block;
+    white-space: normal;
 }
 
-.containerMisEmpresas img {
-    max-height: 120px;
-    width: auto;
-    display: block; /* Centra la imagen si es más pequeña que el contenedor */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    object-fit: contain; /* Asegura que la imagen se ajuste sin cortarse ni distorsionarse */
-}
-
-
-/* Oculta inicialmente el iframe */
-#empresaIframe {
-    display: none;
-    overflow: hidden;
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 250px;
 }
 
 
