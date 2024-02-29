@@ -121,7 +121,7 @@ function updateMainContentVisibility(text) {
         case 'Dashboard':
             document.getElementById('dashboardContainer').style.display = 'block';
             document.getElementById('dashboardContainer').innerHTML = `
-                <iframe title="KPI Power BI" width="1450" height="686" src="https://app.powerbi.com/view?r=eyJrIjoiZmI3YjExMTctMGIyMi00ODg4LTg3NjQtODhjZGE3M2ZkMWEyIiwidCI6ImM2NWEzZWE2LTBmN2MtNDAwYi04OTM0LTVhNmRjMTcwNTY0NSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+                <iframe title="KPI Power BI" width="1220" height="686" src="https://app.powerbi.com/view?r=eyJrIjoiZmI3YjExMTctMGIyMi00ODg4LTg3NjQtODhjZGE3M2ZkMWEyIiwidCI6ImM2NWEzZWE2LTBmN2MtNDAwYi04OTM0LTVhNmRjMTcwNTY0NSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
             `;
             break;
         case 'Capacitacion':
