@@ -15,13 +15,16 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeSectionContainers() {
     var mainContent = document.querySelector('main');
     mainContent.innerHTML = `
+        <div id="welcomeContainer" class="content-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h1>BIENVENIDO ADMINISTRADOR</h1>
+            <img src="/assets/images/logo1.jpg" alt="Inovatech Solutions Logo" style="margin-top: 200px;">
+        </div>
         <div id="callsContainer" class="content-container" style="display: none; flex-wrap: wrap; justify-content: flex-start; gap: 20px;"></div>
         <div id="dashboardContainer" class="content-container" style="display: none;"></div>
         <div id="capacitacionContainer" class="content-container" style="display: none;"></div>
         <div id="customersContainer" class="content-container" style="display: none;"></div>
     `;
     prepareCallsContainer();
-    // No es necesario llamar a prepareCustomersContainer() aquí ya que se llama cuando es necesario mostrar la sección
 }
 
 // Array de nombres y apellidos para los usuarios
@@ -118,7 +121,6 @@ function updateMainContentVisibility(text) {
         case 'Dashboard':
             document.getElementById('dashboardContainer').style.display = 'block';
             document.getElementById('dashboardContainer').innerHTML = `
-                <h2>VENTANA DASHBOARD</h2>
                 <iframe title="KPI Power BI" width="1450" height="686" src="https://app.powerbi.com/view?r=eyJrIjoiZmI3YjExMTctMGIyMi00ODg4LTg3NjQtODhjZGE3M2ZkMWEyIiwidCI6ImM2NWEzZWE2LTBmN2MtNDAwYi04OTM0LTVhNmRjMTcwNTY0NSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
             `;
             break;
@@ -126,9 +128,12 @@ function updateMainContentVisibility(text) {
             prepareCapacitacionContainer();
             document.getElementById('capacitacionContainer').style.display = 'block';
             break;
-        case 'Customers':
+        case 'Agentes':
             prepareCustomersContainer();
             document.getElementById('customersContainer').style.display = 'flex';
+            break;
+        default:
+            document.getElementById('welcomeContainer').style.display = 'flex'; // Mostrar pantalla de bienvenida por defecto
             break;
     }
 }
@@ -230,6 +235,21 @@ function addCustomStyles() {
     }
 
 
+        /* Añade esto a tu bloque de estilos existente */
+    #welcomeContainer h1 {
+        font-size: 2rem;
+        color: var(--color3);
+        text-align: center;
+        margin-bottom: -70px;
+    }
+
+    #welcomeContainer img {
+        /* Ajusta esto según el tamaño de tu logo */
+        width: 750px;
+        height: auto;
+    }
+
+  
     /* Estilo para el botón de agregar empresa */
     #addCompanyButton {
         z-index: 10;
