@@ -42,7 +42,7 @@ const nombres = [
 
 function prepareCustomersContainer() {
     const customersContainer = document.getElementById('customersContainer');
-    customersContainer.innerHTML = '<h2 style="text-align: center; margin-bottom: 20px;">AGENTES REGISTRADOS</h2>';
+    customersContainer.innerHTML = '<h2 style="text-align: center; margin-bottom: 20px;"></h2>';
     
     const scrollContainer = document.createElement('div');
     scrollContainer.style.overflowY = 'auto';
@@ -147,45 +147,73 @@ function prepareCapacitacionContainer() {
     const capacitacionContainer = document.getElementById('capacitacionContainer');
     capacitacionContainer.innerHTML = `
     <div class="add-company-container" style="padding: 20px;">
-    <button id="addCompanyButton" class="button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #007bff; color: white;">+ Agregar Capacitación</button>
-</div>
-<div class="company-form-container" style="display: none; padding: 20px;">
-    <input type="text" id="companyName" placeholder="Nombre de la empresa" style="margin-bottom: 10px; padding: 5px; width: calc(100% - 10px);"/>
-    <input type="file" id="companyImage" style="margin-bottom: 10px;"/>
-    <button id="saveCompanyButton" class="button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #28a745; color: white;">Guardar Empresa</button>
-</div>
-<div class="row row-cols-1 row-cols-md-3 g-4 containerMisEmpresas">
-            <!-- Tarjetas de Empresa -->
-            <div class="col">
-                    <div class="card h-100 empresa-card">
-                        <div class="card-body">
-                            <h5 class="card-title">CAPACITACIÓN 1</h5>
-                            <h6 class="card-title">Webinar conferencia</h6>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col">
-                <div class="card h-100 empresa-card" style="cursor:pointer;">
-                    <div class="card-body">
-                        <h5 class="card-title">CAPACITACIÓN 2</h5>
-                        <h6 class="card-title">Solución de problemas</h6>
-                    </div>
+        <button id="addCompanyButton" class="button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #007bff; color: white;">+ Agregar Capacitación</button>
+    </div>
+    <div class="company-form-container" style="display: none; padding: 20px;">
+        <input type="text" id="companyName" placeholder="Nombre de la empresa" style="margin-bottom: 10px; padding: 5px; width: calc(100% - 10px);"/>
+        <input type="file" id="companyImage" style="margin-bottom: 10px;"/>
+        <button id="saveCompanyButton" class="button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #28a745; color: white;">Guardar Empresa</button>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 containerMisEmpresas">
+        <!-- Tarjetas de Empresa -->
+        <div class="col">
+            <div class="card h-100 empresa-card">
+                <div class="card-body">
+                    <h5 class="card-title">CAPACITACIÓN 1</h5>
+                    <h6 class="card-title">Webinar conferencia</h6>
                 </div>
             </div>
-
-            <div class="col">
-                <div class="card h-100 empresa-card" style="cursor:pointer;">
-                    <div class="card-body">
-                        <h5 class="card-title">CAPACITACIÓN 3</h5>
-                        <h6 class="card-title">Certificado técnico informático</h6>
-                    </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 empresa-card" style="cursor:pointer;">
+                <div class="card-body">
+                    <h5 class="card-title">CAPACITACIÓN 2</h5>
+                    <h6 class="card-title">Solución de problemas</h6>
                 </div>
             </div>
-
+        </div>
+        <div class="col">
+            <div class="card h-100 empresa-card" style="cursor:pointer;">
+                <div class="card-body">
+                    <h5 class="card-title">CAPACITACIÓN 3</h5>
+                    <h6 class="card-title">Certificado técnico informático</h6>
+                </div>
+            </div>
         </div>
     </div>
+    <h3 style="padding: 20px 0;">Recursos</h3>
+    <div class="add-resources-container" style="padding: 20px;">
+        <button id="addResourceButton" class="button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #007bff; color: white;">+ Agregar Recursos</button>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 containerRecursos">
+    <!-- Tarjeta de Recurso 1 -->
+    <div class="col">
+        <div class="card h-100 recurso-card" style="cursor:pointer;">
+            <div class="card-body">
+                <h5 class="card-title">RECURSO 1</h5>
+                <p class="card-text">Guía básica para nuevos usuarios.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Tarjeta de Recurso 2 -->
+    <div class="col">
+        <div class="card h-100 recurso-card" style="cursor:pointer;">
+            <div class="card-body">
+                <h5 class="card-title">RECURSO 2</h5>
+                <p class="card-text">Lista de atajos de teclado importantes.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Tarjeta de Recurso 3 -->
+    <div class="col">
+        <div class="card h-100 recurso-card" style="cursor:pointer;">
+            <div class="card-body">
+                <h5 class="card-title">RECURSO 3</h5>
+                <p class="card-text">Técnicas avanzadas de resolución de problemas.</p>
+            </div>
+        </div>
+    </div>
+</div>
     `;
     document.getElementById('addCompanyButton').addEventListener('click', function() {
         // Crear el fondo oscuro del modal
@@ -221,6 +249,47 @@ function prepareCapacitacionContainer() {
         document.getElementById('closeModal').addEventListener('click', function() {
             document.body.removeChild(modalOverlay);
         });
+    });
+
+    document.getElementById('addResourceButton').addEventListener('click', function() {
+        // Verificar si el modal ya existe para evitar duplicados
+        if (!document.getElementById('modalOverlayResource')) {
+            // Crear el fondo oscuro del modal para recursos
+            var modalOverlayResource = document.createElement('div');
+            modalOverlayResource.id = 'modalOverlayResource';
+    
+            // Crear el contenedor del modal para recursos
+            var modalContainerResource = document.createElement('div');
+            modalContainerResource.id = 'modalContainerResource';
+    
+            // Agregar campos y botón al modal de recursos
+            modalContainerResource.innerHTML = `
+                <h2>Agregar Recurso Inovatech Solution</h2>
+                <label for="resourceNameModal">Nombre del recurso:</label>
+                <input type="text" id="resourceNameModal" placeholder="Nombre del recurso"><br>
+                <label for="resourceTypeModal">Tipo de recurso:</label>
+                <select id="resourceTypeModal">
+                    <option value="guia">Guía</option>
+                    <option value="video">Video</option>
+                    <option value="documento">Documento</option>
+                </select><br>
+                <label for="resourceFileModal">Archivo del recurso:</label>
+                <input type="file" id="resourceFileModal"><br>
+                <button id="closeModalResource">Cerrar</button>
+                <button id="addModalResource">Agregar</button>
+            `;
+    
+            // Añadir el contenedor del modal al fondo oscuro
+            modalOverlayResource.appendChild(modalContainerResource);
+    
+            // Añadir el modal de recursos al body
+            document.body.appendChild(modalOverlayResource);
+    
+            // Evento para cerrar el modal de recursos
+            document.getElementById('closeModalResource').addEventListener('click', function() {
+                document.body.removeChild(modalOverlayResource);
+            });
+        }
     });
 }
 
@@ -263,6 +332,24 @@ function addCustomStyles() {
         padding: 20px;
     }
 
+    /* Estilo para el botón de agregar recursos */
+    #addResourceButton {
+        z-index: 10;
+        margin-left: -50px; /* Ajusta este valor si es necesario */
+        margin-top: 5px;
+    }
+
+    .add-resources-container {
+        display: flex;
+        justify-content: flex-end; /* Alinea el botón de agregar recursos a la derecha */
+        padding: 20px;
+    }
+
+    /* Aumentar el margen superior del subtítulo Recursos */
+    h3 {
+        margin-top: 50px; /* Ajusta este valor según necesites */
+        padding: 20px 0;
+    }
 
 
     .sidebar {
@@ -381,6 +468,64 @@ function addCustomStyles() {
     #modalContainer button#closeModal {
         background-color: #dc3545;
     }
+
+    /* Estilos para el modal de recursos */
+#modalOverlayResource {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+#modalContainerResource {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: auto; /* Ajusta este valor según el contenido */
+    max-width: 600px; /* Asegura que el modal no sea demasiado grande */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Agrega una sombra para resaltar el modal */
+}
+
+#modalContainerResource h2, 
+#modalContainerResource label {
+    margin: 10px 0;
+}
+
+#modalContainerResource input[type="text"],
+#modalContainerResource input[type="file"],
+#modalContainerResource select,
+#modalContainerResource button {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del elemento */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#modalContainerResource button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+#modalContainerResource button#closeModalResource {
+    background-color: #dc3545;
+}
+
+#modalContainerResource button#addModalResource {
+    background-color: #28a745;
+}
+
+
+    
     
     
     @media (min-width: 400px) {
