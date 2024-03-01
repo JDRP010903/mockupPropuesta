@@ -17,7 +17,7 @@ function initializeSectionContainers() {
     mainContent.innerHTML = `
         <div id="welcomeContainer" class="content-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <h1>BIENVENIDO ADMINISTRADOR</h1>
-            <img src="/assets/images/logo1.jpg" alt="Inovatech Solutions Logo" style="margin-top: 200px;">
+            <img class="img-fluid" src="/assets/images/logo1.jpg" alt="Inovatech Solutions Logo" style="margin-top: 200px;">
         </div>
         <div id="callsContainer" class="content-container" style="display: none; flex-wrap: wrap; justify-content: flex-start; gap: 20px;"></div>
         <div id="dashboardContainer" class="content-container" style="display: none;"></div>
@@ -121,7 +121,7 @@ function updateMainContentVisibility(text) {
         case 'Dashboard':
             document.getElementById('dashboardContainer').style.display = 'block';
             document.getElementById('dashboardContainer').innerHTML = `
-                <iframe title="KPI Power BI" width="1220" height="686" src="https://app.powerbi.com/view?r=eyJrIjoiZmI3YjExMTctMGIyMi00ODg4LTg3NjQtODhjZGE3M2ZkMWEyIiwidCI6ImM2NWEzZWE2LTBmN2MtNDAwYi04OTM0LTVhNmRjMTcwNTY0NSIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+                <iframe title="KPI Power BI" width="1220" height="686" src="https://app.powerbi.com/view?r=eyJrIjoiZmI3YjExMTctMGIyMi00ODg4LTg3NjQtODhjZGE3M2ZkMWEyIiwidCI6ImM2NWEzZWE2LTBmN2MtNDAwYi04OTM0LTVhNmRjMTcwNTY0NSIsImMiOjR9" frameBorder="0" allowFullScreen />
             `;
             break;
         case 'Capacitacion':
