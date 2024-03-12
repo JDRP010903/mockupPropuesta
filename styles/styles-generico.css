@@ -1,8 +1,9 @@
 :root {
-    --color1: #edf6f9;
-    --color2: #83c5be;
-    --color3: #006d77;
-    --colorHover: #00444a;
+    --color1: #FAFBFC; /* Athens Gray */
+    --color2: #1E3044; /* Cloud Burst */
+    --color3: #FF570A; /* International Orange */
+    --color4: #C0C9C9; /* Heather */
+    --colorHover: #e14a00; /* A darker shade of International Orange for hover state */
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 }
 
 header {
-    background-color: var(--color3);
+    background-color: var(--color4);
     color: var(--color1);
 }
 
