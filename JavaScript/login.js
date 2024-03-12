@@ -1,11 +1,11 @@
 // Lista de usuarios
 const usuarios = [
-    { email: 'agente1@connecticall.com', tipoUsuario: 'usuario' },
-    { email: 'admin1@connecticall.com', tipoUsuario: 'adminUsuario' }
+    { email: 'agente1@gnp.com', tipoUsuario: 'usuario' },
+    { email: 'admin1@gnp.com', tipoUsuario: 'adminUsuario' }
 ];
 
 function buscarYRedirigir() {
-    const emailIngresado = document.getElementById('email').value;
+    const emailIngresado = document.getElementById('emailLogin').value;
 
     // Buscar el usuario en la lista
     const usuarioEncontrado = usuarios.find(usuario => usuario.email === emailIngresado);
