@@ -1,8 +1,9 @@
 :root {
-    --color1: #edf6f9;
-    --color2: #83c5be;
-    --color3: #006d77;
-    --colorHover: #00444a;
+  --color1: #FF570A; /* International Orange */
+  --color2: #1E3044; /* Cloud Burst */
+  --color3: #C0C9C9; /* Heather */
+  --color4: #FAFBFC; /* Athens Gray */
+  --colorHover: #e14a00; /* A darker shade of International Orange for hover state */
 }
 
 body {
@@ -15,9 +16,9 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-header {
-    background-color: var(--color3);
-    color: var(--color1);
+header .vivirIncreibleImg {
+    height: 50px;
+    margin-right: -4vh;
 }
 
 main {
@@ -37,10 +38,11 @@ main {
 }
 
 .btn-custom {
-    background-color: var(--color3);
-    color: var(--color1);
+    background-color: var(--color1);
+    color: var(--color4);
 }
 
 .btn-custom:hover {
     background-color: var(--colorHover);
+    color: var(--color3);
 }
