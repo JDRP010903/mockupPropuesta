@@ -1,12 +1,11 @@
 /* Estilos generales */
 :root {
-    --color1: #edf6f9; /* Fondo principal y color de fuente para algunos elementos */
-    --color2: #83c5be; /* Color secundario, para fondos de algunos elementos */
-    --color3: #006d77; /* Color de acento, para botones y elementos destacados */
-    --colorTexto: #333; /* Color de texto principal */
-    --slider-thumb-color: var(--color3); /* Color del thumb del slider */
-    --slider-track-color: var(--color2); /* Color de la pista del slider */
-}
+    --color1: #FF570A; /* International Orange */
+    --color2: #1E3044; /* Cloud Burst */
+    --color3: #C0C9C9; /* Heather */
+    --color4: #FAFBFC; /* Athens Gray */
+    --colorHover: #e14a00; /* A darker shade of International Orange for hover state */
+  }
 
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
