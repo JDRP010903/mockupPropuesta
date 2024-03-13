@@ -1,0 +1,78 @@
+:root {
+    --color1: #FAFBFC; /* Athens Gray */
+    --color2: #1E3044; /* Cloud Burst */
+    --color3: #FF570A; /* International Orange */
+    --color4: #C0C9C9; /* Heather */
+    --colorHover: #e14a00; /* A darker shade of International Orange for hover state */
+}
+
+body {
+    background-color: var(--color4);
+    color: var(--color2);
+}
+
+main {
+    margin: -13vh;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    grid-template-rows: auto 1fr; /* Dos filas, la primera tamaño auto y la segunda el resto del espacio */
+    gap: 20px;
+    height: 90vh;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    height: 90vh;
+    padding: 20px;
+}
+
+.transcription {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    overflow-y: auto;
+    padding: 20px;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+}
+
+.call-details, .alert-section {
+    padding: 20px;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+}
+
+.call-details {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.alert-section {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-icon {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.action-buttons .btn {
+    margin-right: 5px;
+}
+
+.alert-custom {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}

@@ -1,0 +1,35 @@
+:root {
+    --color1: #FAFBFC; /* Athens Gray */
+    --color2: #1E3044; /* Cloud Burst */
+    --color3: #FF570A; /* International Orange */
+    --color4: #C0C9C9; /* Heather */
+    --colorHover: #e14a00; /* A darker shade of International Orange for hover state */
+}
+
+body {
+    background-color: var(--color4);
+    color: var(--color2);
+}
+
+main {
+    margin: -12vh;
+}
+
+.transcription-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.send-feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    resize: none;
+}
