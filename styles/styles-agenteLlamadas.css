@@ -1,86 +1,41 @@
 :root {
-    --color1: #edf6f9;
-    --color2: #83c5be;
-    --color3: #006d77;
-    --colorHover: #00444a;
+    --color1: #FAFBFC; /* Athens Gray */
+    --color2: #1E3044; /* Cloud Burst */
+    --color3: #FF570A; /* International Orange */
+    --color4: #C0C9C9; /* Heather */
+    --colorHover: #e14a00; /* A darker shade of International Orange for hover state */
 }
 
-.sidebar {
+body {
+    background-color: var(--color4);
+}
+
+.call-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.call-alert {
     background-color: var(--color1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.sidebar .nav-link {
-    color: var(--color3);
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.btn-respond {
+    background-color: var(--color3);
+    color: var(--color1);
+    border: none;
 }
 
-.sidebar .nav-link:hover, .sidebar .nav-link:focus {
+.btn-respond:hover {
     background-color: var(--colorHover);
-    color: var(--color1);
-}
-
-.sidebar .nav-link.active {
-    background-color: var(--color2);
-    color: var(--color1);
-}
-
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-/* Personalización del botón de hamburguesa */
-.navbar-toggler {
-    border: none; /* Elimina el borde predeterminado */
-    outline: none; /* Elimina el contorno al hacer clic */
-}
-
-/* Estilos para el ícono de hamburguesa */
-.navbar-toggler .bi-list {
-    font-size: 1.5rem; /* Ajusta el tamaño del ícono */
-    color: var(--color1); /* Usa una de tus variables de color para el ícono */
-}
-
-/* Ajustes adicionales para el botón si es necesario */
-.navbar-toggler {
-    padding: 6px;
-    left: 10px; /* Alinea el botón a la derecha dentro del navbar */
-    margin-right: 1rem; /* Agrega un margen derecho si es necesario */
-}
-
-.contenedorImagenesEmpresas img {
-    max-width: 80px;
-    height: auto;
-}
-
-.card {
-    border: 1px solid var(--color2);
-}
-
-.card-title {
-    color: var(--color3);
-}
-
-.card-text {
-    color: var(--color3);
-}
-
-
-@media (min-width: 400px) {
-    .navbar-toggler {
-        padding: 8px;
-        left: 10px; /* Alinea el botón a la derecha dentro del navbar */
-        margin-right: 1rem; /* Agrega un margen derecho si es necesario */
-    }
 }
 @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
+
 }

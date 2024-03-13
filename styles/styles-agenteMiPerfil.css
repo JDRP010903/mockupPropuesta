@@ -5,6 +5,7 @@
     --color4: #C0C9C9; /* Heather */
     --colorHover: #e14a00; /* A darker shade of International Orange for hover state */
 }
+
 body {
     overflow: hidden;
 }
