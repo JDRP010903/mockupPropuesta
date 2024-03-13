@@ -6,11 +6,6 @@
     --colorHover: #e14a00; /* A darker shade of International Orange for hover state */
 }
 
-header .vivirIncreibleImg {
-    height: 50px;
-    margin-right: -4vh;
-}
-
 .sidebar {
     background-color: var(--color1);
 }
@@ -49,12 +44,13 @@ header .vivirIncreibleImg {
 
 /* Estilos para el ícono de hamburguesa */
 .navbar-toggler .bi-list {
-    font-size: 1.5rem; /* Ajusta el tamaño del ícono */
-    color: var(--color1); /* Usa una de tus variables de color para el ícono */
+    font-size: 2rem; /* Ajusta el tamaño del ícono */
+    color: var(--color2); /* Usa una de tus variables de color para el ícono */
 }
 
 /* Ajustes adicionales para el botón si es necesario */
 .navbar-toggler {
+    top: 3vh;
     padding: 6px;
     left: 10px; /* Alinea el botón a la derecha dentro del navbar */
     margin-right: 1rem; /* Agrega un margen derecho si es necesario */
