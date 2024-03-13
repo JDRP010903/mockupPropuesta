@@ -17,7 +17,7 @@ function initializeSectionContainers() {
     mainContent.innerHTML = `
         <div id="welcomeContainer" class="content-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <h1>BIENVENIDO ADMINISTRADOR</h1>
-            <img class="img-fluid" src="/assets/images/logo1.jpg" alt="Inovatech Solutions Logo" style="margin-top: 200px;">
+            <img class="img-fluid" src="../assets/images/GNP_Seguros.svg" alt="Inovatech Solutions Logo" style="margin-top: 200px;">
         </div>
         <div id="callsContainer" class="content-container" style="display: none; flex-wrap: wrap; justify-content: flex-start; gap: 20px;"></div>
         <div id="dashboardContainer" class="content-container" style="display: none;"></div>
@@ -124,10 +124,6 @@ function updateMainContentVisibility(text) {
                 <iframe title="KPI Power BI" width="1220" height="686" src="https://app.powerbi.com/view?r=eyJrIjoiZmI3YjExMTctMGIyMi00ODg4LTg3NjQtODhjZGE3M2ZkMWEyIiwidCI6ImM2NWEzZWE2LTBmN2MtNDAwYi04OTM0LTVhNmRjMTcwNTY0NSIsImMiOjR9" frameBorder="0" allowFullScreen />
             `;
             break;
-        case 'Capacitacion':
-            prepareCapacitacionContainer();
-            document.getElementById('capacitacionContainer').style.display = 'block';
-            break;
         case 'Agentes':
             prepareCustomersContainer();
             document.getElementById('customersContainer').style.display = 'flex';
@@ -143,171 +139,22 @@ function updateMainContentVisibility(text) {
 
 
 
-function prepareCapacitacionContainer() {
-    const capacitacionContainer = document.getElementById('capacitacionContainer');
-    capacitacionContainer.innerHTML = `
-    <div class="add-company-container" style="padding: 20px;">
-        <button id="addCompanyButton" class="button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #007bff; color: white;">+ Agregar Capacitación</button>
-    </div>
-    <div class="company-form-container" style="display: none; padding: 20px;">
-        <input type="text" id="companyName" placeholder="Nombre de la empresa" style="margin-bottom: 10px; padding: 5px; width: calc(100% - 10px);"/>
-        <input type="file" id="companyImage" style="margin-bottom: 10px;"/>
-        <button id="saveCompanyButton" class="button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #28a745; color: white;">Guardar Empresa</button>
-    </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4 containerMisEmpresas">
-        <!-- Tarjetas de Empresa -->
-        <div class="col">
-            <div class="card h-100 empresa-card">
-                <div class="card-body">
-                    <h5 class="card-title">CAPACITACIÓN 1</h5>
-                    <h6 class="card-title">Webinar conferencia</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100 empresa-card" style="cursor:pointer;">
-                <div class="card-body">
-                    <h5 class="card-title">CAPACITACIÓN 2</h5>
-                    <h6 class="card-title">Solución de problemas</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100 empresa-card" style="cursor:pointer;">
-                <div class="card-body">
-                    <h5 class="card-title">CAPACITACIÓN 3</h5>
-                    <h6 class="card-title">Certificado técnico informático</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-    <h3 style="padding: 20px 0;">Recursos</h3>
-    <div class="add-resources-container" style="padding: 20px;">
-        <button id="addResourceButton" class="button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #007bff; color: white;">+ Agregar Recursos</button>
-    </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4 containerRecursos">
-    <!-- Tarjeta de Recurso 1 -->
-    <div class="col">
-        <div class="card h-100 recurso-card" style="cursor:pointer;">
-            <div class="card-body">
-                <h5 class="card-title">RECURSO 1</h5>
-                <p class="card-text">Guía básica para nuevos usuarios.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Tarjeta de Recurso 2 -->
-    <div class="col">
-        <div class="card h-100 recurso-card" style="cursor:pointer;">
-            <div class="card-body">
-                <h5 class="card-title">RECURSO 2</h5>
-                <p class="card-text">Lista de atajos de teclado importantes.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Tarjeta de Recurso 3 -->
-    <div class="col">
-        <div class="card h-100 recurso-card" style="cursor:pointer;">
-            <div class="card-body">
-                <h5 class="card-title">RECURSO 3</h5>
-                <p class="card-text">Técnicas avanzadas de resolución de problemas.</p>
-            </div>
-        </div>
-    </div>
-</div>
-    `;
-    document.getElementById('addCompanyButton').addEventListener('click', function() {
-        // Crear el fondo oscuro del modal
-        var modalOverlay = document.createElement('div');
-        modalOverlay.id = 'modalOverlay';
-        
-        // Crear el contenedor del modal
-        var modalContainer = document.createElement('div');
-        modalContainer.id = 'modalContainer';
-        
-        // Agregar campos y botón al modal
-        modalContainer.innerHTML = `
-            <h2>Agregar Capacitación Inovatech Solution</h2>
-            <label for="companyNameModal">Ingresa nombre de la capacitación:</label>
-            <input type="text" id="companyNameModal" placeholder="Nombre de la capacitacion"><br>
-            <label for="companyImageModal">Inserta material del Curso:</label>
-            <input type="file" id="companyImageModal"><br>
-            <label for="companyImageModal">Inserta la durabilidad del curso</label>
-            <input type="text" id="companyNameModal" placeholder="Durabilidad del curso"><br>
-            <label for="companyImageModal">Inserta certificado del curso (no obligatorio):</label>
-            <input type="file" id="companyImageModal"><br>
-            <button id="closeModal">Cerrar</button>
-            <button id="addModal">Agregar</button>
-        `;
-        
-        // Añadir el contenedor del modal al fondo oscuro
-        modalOverlay.appendChild(modalContainer);
-        
-        // Añadir el modal al body
-        document.body.appendChild(modalOverlay);
-        
-        // Evento para cerrar el modal
-        document.getElementById('closeModal').addEventListener('click', function() {
-            document.body.removeChild(modalOverlay);
-        });
-    });
-
-    document.getElementById('addResourceButton').addEventListener('click', function() {
-        // Verificar si el modal ya existe para evitar duplicados
-        if (!document.getElementById('modalOverlayResource')) {
-            // Crear el fondo oscuro del modal para recursos
-            var modalOverlayResource = document.createElement('div');
-            modalOverlayResource.id = 'modalOverlayResource';
-    
-            // Crear el contenedor del modal para recursos
-            var modalContainerResource = document.createElement('div');
-            modalContainerResource.id = 'modalContainerResource';
-    
-            // Agregar campos y botón al modal de recursos
-            modalContainerResource.innerHTML = `
-                <h2>Agregar Recurso Inovatech Solution</h2>
-                <label for="resourceNameModal">Nombre del recurso:</label>
-                <input type="text" id="resourceNameModal" placeholder="Nombre del recurso"><br>
-                <label for="resourceTypeModal">Tipo de recurso:</label>
-                <select id="resourceTypeModal">
-                    <option value="guia">Guía</option>
-                    <option value="video">Video</option>
-                    <option value="documento">Documento</option>
-                </select><br>
-                <label for="resourceFileModal">Archivo del recurso:</label>
-                <input type="file" id="resourceFileModal"><br>
-                <button id="closeModalResource">Cerrar</button>
-                <button id="addModalResource">Agregar</button>
-            `;
-    
-            // Añadir el contenedor del modal al fondo oscuro
-            modalOverlayResource.appendChild(modalContainerResource);
-    
-            // Añadir el modal de recursos al body
-            document.body.appendChild(modalOverlayResource);
-    
-            // Evento para cerrar el modal de recursos
-            document.getElementById('closeModalResource').addEventListener('click', function() {
-                document.body.removeChild(modalOverlayResource);
-            });
-        }
-    });
-}
-
 function addCustomStyles() {
     const style = document.createElement('style');
     style.textContent = `
     :root {
-        --color1: #edf6f9;
-        --color2: #83c5be;
-        --color3: #006d77;
-        --colorHover: #00444a;
+        --color1: #FF570A; /* International Orange */
+        --color2: #1E3044; /* Cloud Burst */
+        --color3: #C0C9C9; /* Heather */
+        --color4: #FAFBFC; /* Athens Gray */
+        --colorHover: #e14a00; 
     }
 
 
         /* Añade esto a tu bloque de estilos existente */
-    #welcomeContainer h1 {
+        #welcomeContainer h1 {
         font-size: 2rem;
-        color: var(--color3);
+        color: var(--color2);
         text-align: center;
         margin-bottom: -70px;
     }
@@ -352,26 +199,51 @@ function addCustomStyles() {
     }
 
 
+    body, .content-container {
+        background-color: var(--color4); /* Fondo blanco para todas las ventanas */
+    }
+
+    header {
+        background-color: var(--color4); /* Fondo azul para la barra de navegación y sidebar */
+        color: var(--color4); /* Texto blanco */
+    }
+
     .sidebar {
-        background-color: var(--color1);
+        position: fixed; /* Mantiene la barra de navegación fija en su posición */
+        top: 87px; /* Alinea la barra en la parte superior de la pantalla */
+        left: 0; /* Alinea la barra en el lado izquierdo de la pantalla */
+        width: 250px; /* Ancho de la barra de navegación */
+        height: 100%; /* Altura completa de la pantalla */
+        overflow-y: auto; /* Permite el desplazamiento si el contenido es más largo que la pantalla */
+        background-color: #1E3044; /* Color de fondo */
+        color: white; /* Color de texto */
     }
     
+    /* Estilo para el contenedor principal del contenido */
+    .main-content {
+        margin-left: 250px; /* Desplaza el contenido principal para que no sea cubierto por la barra de navegación */
+        padding: 20px; /* Espaciado interno */
+        overflow-y: auto; /* Permite el desplazamiento vertical del contenido */
+        height: 100vh; /* Altura de la ventana del navegador */
+    }
+
+    header h1 {
+        color: var(--color1); /* Asegura que el título también sea blanco si está dentro del header */
+    }
+
     .sidebar .nav-link {
-        color: var(--color3);
-        margin: 10px 0;
-        padding: 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
+        color: var(--color1); /* Texto blanco para los links */
+        margin-bottom: 65px; /* Espacio hacia abajo para cada link */
     }
-    
+
     .sidebar .nav-link:hover, .sidebar .nav-link:focus {
-        background-color: var(--colorHover);
-        color: var(--color1);
-    }
-    
-    .sidebar .nav-link.active {
         background-color: var(--color2);
-        color: var(--color1);
+        color: var(--color3);
+    }
+
+    .sidebar .nav-link.active {
+        background-color: var(--color2); /* Mantenemos el azul para el estado activo */
+        color: var(--color4); /* Texto blanco para el estado activo */
     }
     
     .bd-placeholder-img {
@@ -525,21 +397,87 @@ function addCustomStyles() {
 }
 
 
+#callsContainer {
+    display: flex; /* Mantiene el estilo flex que ya tenías */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    gap: 20px; /* Mantiene el espacio entre los elementos */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    max-height: calc(100vh - 100px); /* Establece una altura máxima para activar el desplazamiento */
+    margin-top: 20px; /* Ajusta según sea necesario para no superponer la barra de navegación */
+}
+
+#dashboardContainer {
+    display: block;
+    width: 100%;
+    overflow-x: hidden; /* Previene el desplazamiento horizontal */
+    text-align: center; /* Centra el iframe si es más pequeño que el contenedor */
+}
+
+
+
     
-    
-    
-    @media (min-width: 400px) {
-        .navbar-toggler {
-            padding: 8px;
-            left: 1000px; /* Alinea el botón a la derecha dentro del navbar */
-            margin-right: 1rem; /* Agrega un margen derecho si es necesario */
-        }
+/* Estilos para dispositivos móviles (teléfonos) */
+@media (max-width: 600px) {
+    #welcomeContainer h1 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+        margin-bottom: 20px; /* Menos margen inferior */
     }
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-        }
+
+    #welcomeContainer img {
+        width: 90%; /* Imagen más pequeña y responsiva */
+        height: auto;
     }
+
+    #dashboardContainer iframe {
+        width: 100%; /* Ajusta el iframe al ancho del dispositivo */
+        height: auto; /* Altura automática para mantener la relación de aspecto */
+        min-height: 500px; /* Altura mínima para asegurar visibilidad */
+    }
+
+    .sidebar {
+        position: static; /* La barra lateral se convierte en parte del flujo de la página */
+        width: 100%; /* Ocupa el ancho completo de la pantalla */
+        top: auto;
+        left: auto;
+    }
+
+    .main-content {
+        margin-left: 0; /* El contenido principal ya no se desplaza para dejar espacio a la barra lateral */
+        padding: 10px; /* Menos padding para aprovechar mejor el espacio */
+    }
+
+    #addCompanyButton, #addResourceButton {
+        margin-left: 0; /* Ajusta la posición del botón */
+    }
+}
+
+/* Estilos para tablets y dispositivos con pantallas de tamaño intermedio */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #welcomeContainer h1 {
+        font-size: 1.75rem; /* Un tamaño intermedio para tablets */
+    }
+
+    #welcomeContainer img {
+        width: 80%; /* Tamaño adaptativo para la imagen */
+    }
+
+    #dashboardContainer iframe {
+        width: 100%; /* Asegura que el iframe se ajuste al ancho del contenedor */
+        height: auto; /* Altura ajustable automáticamente */
+        min-height: 400px; /* Ajusta la altura mínima para tablets */
+    }
+
+
+    .sidebar {
+        width: 200px; /* Una barra lateral más estrecha para tablets */
+    }
+
+    .main-content {
+        margin-left: 200px; /* Ajusta el margen izquierdo para el nuevo ancho de la barra lateral */
+        padding: 15px;
+    }
+}
     
     `;
     document.head.appendChild(style);
@@ -566,12 +504,13 @@ function addCall(callCount) {
 function createCallWindow(id) {
     const emotions = ['😊', '😢', '😠', '😐']; // Lista de emociones
     return `
-        <div id="callWindow${id}" class="window" style="width: 380px; background-color: #ffffff; padding: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px;">
-            <div style="float: left; width: 48%;">
-                <div class="header" style="font-size: 16px; color: #333; margin-bottom: 10px;">Llamada entrante ${id}</div>
-                <div class="content" style="margin-bottom: 10px;">¿Deseas atender la llamada?</div>
-                <button class="button answer-button" style="padding: 5px 10px; cursor: pointer; border: none; border-radius: 5px; background-color: #007bff; color: white;">Contestar</button>
+        <div id="callWindow${id}" class="window" style="width: 380px; background-color: #1E3044; padding: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+            <div style="float: left; width: 48%; margin-bottom: 50px;">
+                <div class="header" style="font-size: 16px; color: #C0C9C9; margin-bottom: 50px; font-weight: bold;">Llamada entrante ${id}</div>
+                <div class="content" style="margin-bottom: 50px; color: #C0C9C9; font-size: 14px;">¿Deseas atender la llamada?</div>
+                <button class="button answer-button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #007bff; color: white; font-size: 14px; transition: background-color 0.3s ease;">Contestar</button>
             </div>
+    
             <div class="info-window" style="float: right; width: 48%; display: flex; flex-wrap: wrap; gap: 10px;">
                 <div class="info-box" style="flex: 1 1 48%; padding: 10px; background: #f2f2f2; border-radius: 5px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
                     <div class="info-icon" id="emoji${id}">${emotions[Math.floor(Math.random() * emotions.length)]}</div>
