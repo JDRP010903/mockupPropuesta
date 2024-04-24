@@ -508,7 +508,7 @@ function createCallWindow(id) {
             <div style="float: left; width: 48%; margin-bottom: 50px;">
                 <div class="header" style="font-size: 16px; color: #C0C9C9; margin-bottom: 50px; font-weight: bold;">Llamada entrante ${id}</div>
                 <div class="content" style="margin-bottom: 50px; color: #C0C9C9; font-size: 14px;">¿Deseas atender la llamada?</div>
-                <button class="button answer-button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #007bff; color: white; font-size: 14px; transition: background-color 0.3s ease;">Contestar</button>
+                <button class="button answer-button" style="padding: 10px 15px; cursor: pointer; border: none; border-radius: 5px; background-color: #007bff; color: white; font-size: 14px; transition: background-color 0.3s ease;">Ingresar llamada</button>
             </div>
     
             <div class="info-window" style="float: right; width: 48%; display: flex; flex-wrap: wrap; gap: 10px;">

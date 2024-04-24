@@ -46,6 +46,10 @@ body {
     animation: breatheAnimation 2s ease-in-out infinite;
 }
 
+a {
+    text-decoration: none;
+}
+
 .call-alert:hover {
     transform: scale(1.05);
 }
